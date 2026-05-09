@@ -4,7 +4,7 @@ import { KeyRound, Zap, CreditCard, Terminal, ShieldCheck, Activity, BookOpen, A
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton, useUser, useAuth } from "@clerk/clerk-react";
 import "./style.css";
 
-const API = "http://localhost:4242";
+const API = import.meta.env.VITE_API_URL || "http://localhost:4242";
 
 const money = (cents) => `$${(cents / 100).toFixed(2)}`;
 
